@@ -5,7 +5,8 @@ import App from './App'
 import router from './router'
 import {VueAxios} from './config/axios'
 import * as api from './api'
-
+import 'amfe-flexible'
+import store from './config/store'
 Vue.config.productionTip = false
 Vue.prototype.$api=api;
 
@@ -14,6 +15,7 @@ Vue.use(VueAxios,router);
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
